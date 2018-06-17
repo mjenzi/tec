@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 # mjenzi
 This README would normally document whatever steps are necessary to get the
@@ -23,3 +24,7 @@ Things you may want to cover:
 
 * ...
 
+=======
+# tec
+Thamani Economics Consulting
+>>>>>>> 9486c131f84f1ceebf4e9ac47c8a282c4002c9b1
