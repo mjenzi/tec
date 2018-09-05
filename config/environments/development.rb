@@ -18,7 +18,7 @@ Rails.application.configure do
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => 'public, max-age=172800'
+      'Cache-Control' => "public, max-age=#{2.days.seconds.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -26,20 +26,8 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  #GMAIL smtp
-
-
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-
-  # config.action_mailer.delivery_method = :smtp
-  ActionMailer::Base.delivery_method = :smtp
-
-  #for Gmail
-  config.action_mailer.perform_deliveries = true
-
-  # config.action_mailer.delivery_method = :sendmail
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
 
